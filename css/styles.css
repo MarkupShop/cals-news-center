@@ -1,1 +1,166 @@
 @import "lib/bootstrap.css";
+body {
+  font-family: 'UniversLight', arial, sans-serif;
+}
+.story-arrow {
+  color: #c00;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  left: 0;
+  top: -1px;
+  transition: left 0.2s ease;
+}
+.wrapper {
+  margin: 0px auto;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1170px;
+  }
+}
+#main-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#main-header h1 {
+  margin: 0;
+  line-height: 1em;
+}
+#main-header h1 a {
+  display: block;
+  width: 250px;
+  height: 50px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: url("http://placehold.it/250x50/eeeeee") no-repeat;
+}
+#main-nav,
+#local-nav {
+  overflow: auto;
+  font-family: arial, sans-serif;
+}
+#main-nav ul,
+#local-nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+#main-nav li,
+#local-nav li {
+  float: left;
+  margin-right: 30px;
+}
+#main-nav li:before,
+#local-nav li:before {
+  display: none;
+}
+#main-nav li a,
+#local-nav li a {
+  position: relative;
+  padding: 10px 5px;
+  display: block;
+  color: #000;
+  font-size: 13px;
+}
+#main-nav li.active a,
+#local-nav li.active a,
+#main-nav li a:hover,
+#local-nav li a:hover {
+  font-weight: bold;
+}
+#main-nav {
+  background: #eee;
+}
+#main-nav li.active a:after,
+#main-nav li a:hover:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-bottom: solid #bbb 10px;
+  bottom: -1px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  display: block;
+  position: absolute;
+}
+#local-nav {
+  background: #bbb;
+}
+.feature-story {
+  margin-bottom: 80px;
+}
+.feature-story .feature-story-heading {
+  margin: 80px 0px 0px 0px;
+  font-size: 48px;
+  line-height: 104.16666667%;
+  font-family: 'GlyphaRoman', Serif;
+}
+.feature-story .feature-story-image img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.feature-story .feature-story-text {
+  max-width: 880px;
+  margin: 0px auto;
+  font-size: 14px;
+  line-height: 257.14285714%;
+}
+.feature-story .feature-story-text p {
+  margin: 30px 0px 0px 0px;
+}
+.story-grid .story-grid-item {
+  margin-bottom: 80px;
+}
+.story-grid .story-grid-item-image img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.story-grid .story-grid-item-heading {
+  font-weight: normal;
+  font-family: 'UniversLight', arial, sans-serif;
+}
+.story-grid .story-grid-item-text {
+  line-height: 257.14285714%;
+  margin-bottom: 0px;
+}
+#main-footer {
+  background: #999;
+  padding: 40px 0px;
+}
+#main-footer h2 {
+  margin: 20px 0px;
+  color: #fff;
+  font-size: 24px;
+}
+#main-footer ul li:before {
+  color: #fff;
+}
+#main-footer a {
+  color: #fff;
+}
+#main-footer .copyright p {
+  margin: 20px 0px;
+  color: #fff;
+  font-size: 14px;
+}
+#main-footer .social-media-block {
+  background: #333;
+  padding: 20px;
+}

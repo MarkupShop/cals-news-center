@@ -1,12 +1,65 @@
 <?php get_header(); ?>
 
-<section id="main">
+<section id="home-page">
 
-    <h2>Home.php</h2>
-    
-    <p>Welcome to home.php</p>
+    <?php get_template_part('part','feature-story'); ?>
+
+    <div class="story-grid">
+
+        <div class="wrapper">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <?php get_template_part('part','grid-story'); ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div><!-- end .story-grid -->
 
 </section><!--#main-->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
