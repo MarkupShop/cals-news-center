@@ -3,6 +3,7 @@
     <head>  
         <title><?php bloginfo('name'); ?></title>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
+        <?php wp_head(); ?>
     </head>
     
     <body>

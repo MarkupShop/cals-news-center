@@ -100,5 +100,7 @@
 
     <script src="https://cdn.ncsu.edu/brand-assets/utility-bar/ub.php?googleCustomSearchCode=000255019299304548425%3Ag-hzdbw3do0&placeholder=Search%20CALS%20News&maxWidth=1200&color=gray"></script>
 
+    <?php wp_footer(); ?>
+
 </body>
 </html>
