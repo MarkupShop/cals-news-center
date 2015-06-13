@@ -147,8 +147,16 @@ body {
   line-height: 257.14285714%;
   margin-bottom: 0px;
 }
+.story {
+  overflow: auto;
+}
 .story .story-heading {
   font-family: 'GlyphaRoman', Serif;
+}
+.story .story-thumb-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 #main-footer {
   background: #999;

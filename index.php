@@ -10,8 +10,11 @@
 
 				<div class="col-md-8 col-md-push-4">
 
+					<?php $termTitle = single_term_title("", false); ?>
+                    <h2><?php echo $termTitle; ?></h2>
+
 					<?php get_template_part('part','loop'); ?>
-					<?php echo paginate_links( $args ); ?>
+					<?php echo paginate_links(); ?>
 					
 				</div>
 
