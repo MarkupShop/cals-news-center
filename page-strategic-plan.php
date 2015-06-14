@@ -5,131 +5,88 @@ Template Name: Strategic Plan Template
 
 get_header(); ?>
 
-	<div id="content">
+<section id="main">
 
-		<div id="slideshow" class="span-12 pull-1">
+    <div class="wrapper">
 
-			<div class="strategic-plan-intro">
+        <div class="container">
+    
+            <div class="row">
 
-				<?php while (have_posts()) : the_post(); ?>
+                <div class="col-md-8 col-md-push-4">
 
-					<?php $videoId = get_field('youtube_video'); ?>
-					<?php if(strlen($videoId)>0): ?>
-						<iframe width="450" height="300" 
-							src="//www.youtube.com/embed/<?php echo $videoId; ?>?showinfo=0&rel=0" 
-							frameborder="0" allowfullscreen></iframe>
-					<?php else: ?>
-						<?php the_post_thumbnail(); ?>
-					<?php endif; ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-	                <div class="story-text">
-						<?php the_content(); ?>
-					</div>
+                        <?php $videoId = get_field('youtube_video'); ?>
+                        <?php if(strlen($videoId)>0): ?>
+                            <div class="video">
+                                <iframe frameborder="0" allowfullscreen
+                                    src="//www.youtube.com/embed/<?php echo $videoId; ?>?showinfo=0&rel=0" 
+                                ></iframe>
+                            </div>
+                        <?php else: ?>
+                            <?php the_post_thumbnail(); ?>
+                        <?php endif; ?>
 
-				<?php endwhile; ?>
+                        <div class="story-text">
+                            <?php the_content(); ?>
+                        </div>
 
-			</div>
-               
-		</div><!-- end #slideshow -->
+                    <?php endwhile; ?>
 
-		<div id="headlines" class="span-4">
-			<div class="box">
+                    <?php
+                        $args = array(
+                            'post_status' => 'publish',
+                            'posts_per_page' => 6,
+                            'category_name' => 'the-strategic-plan'
+                        );
+                        $wp_query_strat = new WP_Query($args);
+                        $cnt = 0;
+                    ?>
 
-			<?php
-				$args = array(
-					'post_status' => publish,
-					'posts_per_page' => 6,
-					'category_name' => 'the-strategic-plan'
-				);
-				$wp_query_strat = new WP_Query($args);
-				$cnt = 0;
+                    <?php while ($wp_query_strat->have_posts()) : $wp_query_strat->the_post(); ?>
 
-			?>
-				
-                <?php while ($wp_query_strat->have_posts()) : $wp_query_strat->the_post(); ?>
+                        <?php if($cnt++ < 6): ?>
 
-                	<?php if($cnt++ < 3): ?>
+                            <article class="story">
+        
+                                <h3 class="story-heading">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </h3>
+                                
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <div class="story-thumb-image">
+                                        <?php the_post_thumbnail( array(100,450) ); ?>
+                                    </div>
+                                <?php endif; ?>
+                                
+                                <p class="story-text">
+                                    <?php echo get_the_excerpt(); ?>
+                                    <span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span>
+                                </p>
+                            
+                            </article>
 
-                    <!--BEGIN news-story-->
-						<div class="clearfix news-story news-story-<?php the_ID(); ?>">
-							<h4><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h4>
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-                            <div class="story-text">
-								<?php the_excerpt(); ?>
-								
-							</div>
-						</div>
-                    <!--END news-story-->
+                        <?php endif; ?>
 
-                	<?php endif; ?>
+                <?php endwhile; ?>
 
-				<?php endwhile; ?>
+                </div>
 
-			</div>
-		</div><!-- end #news -->
+                <div class="col-md-4 col-md-pull-8">
 
+                    <?php get_sidebar(); ?>
 
-		<div id="extension-news" class="span-4">
-			<div class="box">
+                </div>
 
-				<?php $wp_query_strat->rewind_posts(); $cnt = 0; ?>
-				<?php while ($wp_query_strat->have_posts()) : $wp_query_strat->the_post(); ?>
+            </div>
 
-                	<?php if($cnt++ > 2): ?>
+        </div>
 
-                    <!--BEGIN news-story-->
-						<div class="clearfix news-story news-story-<?php the_ID(); ?>">
-							<h4><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h4>
-							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-                            <div class="story-text">
-								<?php the_excerpt(); ?>
-								
-							</div>
-						</div>
-                    <!--END news-story-->
+    </div>
 
-                	<?php endif; ?>
+</section><!-- end #main -->
 
-				<?php endwhile; ?>
-
-			</div>
-
-		</div><!-- end #news -->
-
-
-		<div id="economic-perspectives" class="span-4 strat-bar" style="width:312px;">
-
-
-			<div class="box headlines">
-				<ul>
-					<?php
-						$parent = get_category_by_slug('the-strategic-plan'); 
-  						$parent_id = $parent->term_id; 
-						$catPeople  = get_category_by_slug('strategic-plan-people');
-						
-						$catPartnerships  = get_category_by_slug('strategic-plan-partnerships');
-						$catPrograms  = get_category_by_slug('strategic-plan-programs');
-					$catConversations  = get_category_by_slug('strategic-plan-strategic-conversations');	
-
-						$cats = array($catPeople->term_id, $catPartnerships->term_id, $catPrograms->term_id, $catConversations->term_id);
-
-
-						wp_list_categories(array(
-							'child_of' => $parent_id,
-							'title_li' => '',
-							'include' => implode(',',$cats),
-							'orderby' => 'ID',
-							'show_option_none' => '',
-							'hide_empty' => 0 // remove this
-						)); 
-					?>
-				</ul>
-			</div>
-
-
-		</div><!-- end #news -->
-
-
-		<div class="clearfix"></div>
-	</div> <!-- end #content -->
 <?php get_footer(); ?>

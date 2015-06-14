@@ -1,7 +1,7 @@
 <div class="feature-story">
 
     <div class="feature-story-image">
-        <img src="http://placehold.it/1500x500/#333" alt="Feature Story Image" />
+        <img src="https://www.ncsu.edu/wp-content/uploads/2014/08/gait-07.jpg" alt="Feature Story Image" />
     </div>
 
     <div class="wrapper">

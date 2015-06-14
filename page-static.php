@@ -2,25 +2,44 @@
 /*
 Template Name: Static Content
 */
- get_header(); ?>
+get_header(); ?>
 
-<div class="secondary span-12">
+<section id="main">
 
-    <div id="content-secondary">
-		 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-          <?php the_content(__('Read more'));?>	
-         <?php endwhile; else: ?>
-          <p><strong>There has been a glitch in the Matrix.</strong><br />
-          There is nothing to see here.</p>
-          <p>Please try somewhere else.</p>
-         <?php endif; ?>
+    <div class="wrapper">
 
-	</div><!-- end #content-secondary -->
+        <div class="container">
+    
+            <div class="row">
 
+                <div class="col-md-8 col-md-push-4">
 
-	<?php get_sidebar('static'); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          
+                        <h2><?php the_title(); ?></h2>
+          
+                        <?php the_content(); ?> 
 
-</div><!-- end #secondary -->
+                    <?php endwhile; else: ?>
+          
+                        <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+         
+                    <?php endif; ?>
+          
+                </div>
+
+                <div class="col-md-4 col-md-pull-8">
+
+                    <?php get_sidebar(); ?>
+
+                </div>
+
+            </div>
+
+        </div>  
+
+    </div>
+    
+</section><!--#main-->
 
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 <div class="story-grid-item">
 
     <div class="story-grid-item-image">
-        <img src="http://placehold.it/400x200/#333" alt="Story Grid Image" />
+        <img src="http://lorempixel.com/400/200/" alt="Story Grid Image" />
     </div>
 
     <h3 class="story-grid-item-heading"><a href="#">Summit examines future of food</a></h3>

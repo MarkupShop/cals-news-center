@@ -8,6 +8,8 @@
      **  iii. Custom Taxonomies
      **  iv.  Theme Functions
      **  v.   Short Codes
+     **  vi.  Sidebars
+     **  vii. Feeds
      ** 
      **/
 
@@ -16,10 +18,6 @@
     ******************************************************************************/
 
     ## Resource: http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
-
-    if ( function_exists('register_sidebar') ){
-        register_sidebar(array('id'=>'sidebar-1'));
-    }
 
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'nav-menus' );
@@ -392,6 +390,10 @@
     /*****************************************************************************s
     *** vi.  Sidebars
     ******************************************************************************/
+
+    if ( function_exists('register_sidebar') ){
+        register_sidebar(array('id'=>'sidebar-1'));
+    }
 
     /*****************************************************************************s
     *** vii.  Feeds
