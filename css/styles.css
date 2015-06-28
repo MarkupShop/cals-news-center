@@ -201,6 +201,9 @@ a:focus .glyphicon-roman-arrow {
     display: block;
     position: absolute;
   }
+  #main-nav ul li.menu-item-active li a:after {
+    display: none;
+  }
   #main-nav ul li.menu-item-active ul {
     display: block;
   }
