@@ -1,3 +1,5 @@
+    </div><!-- end #main-content-wrapper -->
+
     <footer id="main-footer">
         
         <div class="wrapper">
@@ -96,6 +98,8 @@
 
     </footer>
 
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.11.3.min.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/main.min.js"></script>
     <script src="https://cdn.ncsu.edu/brand-assets/utility-bar/ub.php?googleCustomSearchCode=000255019299304548425%3Ag-hzdbw3do0&placeholder=Search%20CALS%20News&maxWidth=1170&color=gray"></script>
 
     <?php wp_footer(); ?>

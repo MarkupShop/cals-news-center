@@ -1,11 +1,16 @@
-body {
-    font-family: @sans-font-stack;
+html {
+    font-size: 14px;
 }
 
-.story-arrow {
-    color: @primary-red;
-    font-size: 2em;
-    font-weight: bold;
+body {
+    font-family: @sans-font-stack;
+    font-size: 14px;
+}
+
+.glyphicon-thin-arrow,
+.glyphicon-bold-arrow, 
+.glyphicon-roman-arrow {
+    font-size: 1.5em;
     line-height: 1.5rem;
     vertical-align: middle;
     display: inline-block;
@@ -15,9 +20,30 @@ body {
     transition: left 0.2s ease;
 }
 
+a:hover,
+a:focus {
+    .glyphicon-thin-arrow,
+    .glyphicon-bold-arrow, 
+    .glyphicon-roman-arrow {
+        left: 4px;
+    }
+}
+
 #wpadminbar {
     // Overide default placement of WordPress admin bar
     // so that it doesn't conflict with NCSU admin bar.
     top: auto !important;
     bottom: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed !important;
+    }
+}
+
+@media (min-width: 768px) {
+    body, html {
+        font-size: 16px;
+    }
 }

@@ -12,6 +12,9 @@ module.exports = function (grunt) {
                 options: {node: true},
                 globals: {module: true},
                 src: 'Gruntfile.js'
+            },
+            dist: {
+                src: 'js/main.js'
             }
         },
 
@@ -28,6 +31,14 @@ module.exports = function (grunt) {
             }
         },
 
+        uglify: {
+            dist: {
+                files: {
+                    'js/main.min.js': ['js/main.js']
+                }
+            }
+        },
+
         watch: {
             less: {
                 files: [
@@ -36,11 +47,18 @@ module.exports = function (grunt) {
                 ],
                 tasks: 'less:dist',
                 interrupt: true
+            },
+            js: {
+                files: [
+                    'js/main.js'
+                ],
+                tasks: ['jshint:dist','uglify:dist'],
+                interrupt: true
             }
         }
 
     });
 
-    grunt.registerTask('default', ['less:dist','watch']);
+    grunt.registerTask('default', ['jshint', 'less:dist', 'uglify:dist' ,'watch']);
 
 };
