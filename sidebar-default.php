@@ -2,30 +2,24 @@
 
     <h3>Issues</h3>
 
-    <ul>    
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2015">Summer 2015</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/spring-2015">Spring 2015</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/winter-2015">Winter 2015</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2014">Fall 2014</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2014">Summer 2014</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/winter-2014">Winter 2014</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/spring-2014">Spring 2014</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2013">Fall 2013</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2013">Summer 2013</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/spring-2013">Spring 2013</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/winter-2013">Winter 2013</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2012">Fall 2012</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2012">Fall 2012</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2012">Summer 2012</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/spring-2012">Spring 2012</a></li>        
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/winter-2012">Winter 2012</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2011"  >Fall 2011</a></li>    
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2011">Summer 2011</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/spring-2011">Spring 2011</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/winter-2011">Winter 2011</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/fall-2010"  >Fall 2010</a></li>
-        <li><a href="<?php echo home_url(); ?>/perspectives-issues/summer-2010">Summer 2010</a></li>
-    </ul>
+    <?php 
+        $issues = get_terms('perspectives-issues', array(
+            "order" => "desc",
+            "orderby" => "id"
+        )); 
+
+        if ($issues) {
+            
+            echo "<ul>";
+            
+            foreach ($issues as $issue) {
+                echo "<li><a href=\"" . home_url() . "/perspectives-issues/{$issue->slug}\">{$issue->name}</a></li>";
+            }  
+            
+            echo "</ul>";
+        
+        } 
+    ?>
 
     <ul>
         <li><a href="http://www.cals.ncsu.edu/agcomm/magazine/index.html">Older Archives &raquo;</a></li>
