@@ -50,22 +50,22 @@ get_header(); ?>
 
                             <article class="story">
         
-                                <h3 class="story-heading">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h3>
-                                
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <div class="story-thumb-image">
-                                        <?php the_post_thumbnail( array(100,450) ); ?>
-                                    </div>
-                                <?php endif; ?>
-                                
-                                <p class="story-text">
-                                    <?php echo get_the_excerpt(); ?>
-                                    <span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span>
-                                </p>
+                                <a href="<?php the_permalink(); ?>">
+
+                                    <h3 class="story-heading"><?php the_title(); ?></h3>
+                                    
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <div class="story-thumb-image">
+                                            <?php the_post_thumbnail( array(100,450) ); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <p class="story-text">
+                                        <?php echo get_the_excerpt(); ?>
+                                        <span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span>
+                                    </p>
+
+                                </a>
                             
                             </article>
 

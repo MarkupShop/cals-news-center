@@ -13,20 +13,22 @@
 
             <div class="story" name="<?php echo $this_post_type; ?>">
                 
-                <h4 class="story-heading">
-                    <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-                </h4>
+                <a href="<?php the_permalink() ?>" rel="bookmark">
 
-                <?php if (has_post_thumbnail()) : ?>
-                    <div class="story-thumb-image">
-                        <?php the_post_thumbnail( array(100,450) ); ?>
-                    </div>
-                <?php endif; ?>
+                    <h4 class="story-heading"><?php the_title(); ?></h4>
 
-                <p class="story-text">
-                	<?php echo rtrim(get_the_excerpt()); ?>
-                	<span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span>
-                </p>
+                    <?php if (has_post_thumbnail()) : ?>
+                        <div class="story-thumb-image">
+                            <?php the_post_thumbnail( array(100,450) ); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <p class="story-text">
+                    	<?php echo rtrim(get_the_excerpt()); ?>
+                    	<span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span>
+                    </p>
+
+                </a>
 
             </div><!-- end #post -->
 

@@ -10,14 +10,24 @@
         margin: 0 auto;
     }
 
-    .story-grid-item-heading {
-        font-weight: normal;
-        font-family: @sans-font-stack;
+    a {
+        color: @accent-gray-4;
+
+        .story-grid-item-heading {
+            font-weight: normal;
+            font-family: @sans-font-stack;
+            color: @primary-red;
+        }
+
+        .story-grid-item-text {
+            line-height: percentage(36/14);
+            margin-bottom: 0px;
+        }
+
     }
 
-    .story-grid-item-text {
-        line-height: percentage(36/14);
-        margin-bottom: 0px;
+    a:hover .story-grid-item-heading {
+        color: @secondary-red;
     }
 
 }
