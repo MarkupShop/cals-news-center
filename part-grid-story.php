@@ -4,7 +4,7 @@
 
 		<?php if (has_post_thumbnail()) : ?>
             <div class="story-grid-item-image">
-                <?php the_post_thumbnail( array(360,300) ); ?>
+                <?php the_post_thumbnail( array(360,240) ); ?>
             </div>
         <?php endif; ?>
 

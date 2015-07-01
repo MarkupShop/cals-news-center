@@ -14,52 +14,45 @@
 
                 <div class="row">
 
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         
                         <ul>
-                            <li><a href="#">Academic Programs</a></li>
-                            <li><a href="#">Advancement</a></li>
-                            <li><a href="#">Agricultural and Extension Education</a></li>
-                            <li><a href="#">Agricultural and Resource Economics</a></li>
-                            <li><a href="#">Agricultural Institute</a></li>
-                            <li><a href="#">Animal Science</a></li>
-                            <li><a href="#">Applied Ecology</a></li>
-                            <li><a href="#">Biological and Agricultural Engineering</a></li>
-                            <li><a href="#">Business Center</a></li>
-                            <li><a href="#">CALS Communications</a></li>
+                            <li><a href="http://harvest.cals.ncsu.edu/academic/">Academic Programs</a></li>         
+                            <li><a href="http://www.cals.ncsu.edu/advancement/">Advancement</a></li>            
+                            <li><a href="http://harvest.cals.ncsu.edu/agscience/">Agricultural and Extension Education</a></li>         
+                            <li><a href="http://www.ag-econ.ncsu.edu/">Agricultural and Resource Economics</a></li>         
+                            <li><a href="http://harvest.cals.ncsu.edu/aginstitute/">Agricultural Institute</a></li>         
+                            <li><a href="http://www.cals.ncsu.edu/an_sci/home/home.html">Animal Science</a></li>            
+                            <li><a href="http://appliedecology.cals.ncsu.edu/">Applied Ecology</a></li>         
+                            <li><a href="http://www.bae.ncsu.edu/">Biological and Agricultural Engineering</a></li>         
+                            <li><a href="http://harvest.cals.ncsu.edu/cbo/">Business Operations</a></li>            
+                            <li><a href="http://www.cals.ncsu.edu/agcomm/">CALS Communications</a></li>         
+                            <li><a href="http://harvest.cals.ncsu.edu/career/">Career Services</a></li>         
+                            <li><a href="http://www.ces.ncsu.edu/">Cooperative Extension</a></li>           
+                            <li><a href="http://www.cropsci.ncsu.edu/Default.asp?fmtinfo=1,450,150">Crop Science</a></li>           
+                            <li><a href="http://harvest.cals.ncsu.edu/dean/index.cfm?pageID=1042">Dean's Office</a></li>            
+                            <li><a href="http://www.cals.ncsu.edu/entomology/">Entomology</a></li>                      
                         </ul>
 
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="col-md-5">
                         
                         <ul>
-                            <li><a href="#">Career Services</a></li>
-                            <li><a href="#">Cooperative Extension</a></li>
-                            <li><a href="#">Crop Science</a></li>
-                            <li><a href="#">Dean's Office</a></li>
-                            <li><a href="#">Entomology</a></li>
-                            <li><a href="#">Extension Information Technology (EIT)</a></li>
-                            <li><a href="#">Food, Bioprocessing and Nutrition Sciences</a></li>
-                            <li><a href="#">Horticultural Science</a></li>
-                            <li><a href="#">Information Technology</a></li>
-                            <li><a href="#">International Programs</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="col-md-3">
-                       
-                        <ul>
-                            <li><a href="#">Molecular and Structural Biochemistry</a></li>
-                            <li><a href="#">Personnel</a></li>
-                            <li><a href="#">Plant &amp; Microbial Biology</a></li>
-                            <li><a href="#">Plant Pathology</a></li>
-                            <li><a href="#">Prestage Dept of Poultry Science</a></li>
-                            <li><a href="#">Research</a></li>
-                            <li><a href="#">Soil Science</a></li>
-                            <li><a href="#">Statistics</a></li>
-                            <li><a href="#">Youth, Family, and Community Sciences</a></li>
+                            <li><a href="http://www.ces.ncsu.edu/eit/">Extension Information Technology (EIT)</a></li>          
+                            <li><a href="http://www.ncsu.edu/foodscience/">Food, Bioprocessing and Nutrition Sciences</a></li>          
+                            <li><a href="http://www.cals.ncsu.edu/hort_sci/">Horticultural Science</a></li>         
+                            <li><a href="http://harvest.cals.ncsu.edu/caat/index.cfm?pageID=4709">Information Technology</a></li>           
+                            <li><a href="http://www.cals.ncsu.edu/international/index.htm">International Programs</a></li>          
+                            <li><a href="http://biochem.ncsu.edu/">Molecular and Structural Biochemistry</a></li>           
+                            <li><a href="http://harvest.cals.ncsu.edu/personnel/">Personnel</a></li>            
+                            <li><a href="http://www.cals.ncsu.edu/pmb/">Plant &amp; Microbial Biology</a></li>          
+                            <li><a href="http://www.cals.ncsu.edu/plantpath/">Plant Pathology</a></li>          
+                            <li><a href="http://harvest.cals.ncsu.edu/prestage-poultry-science/">Prestage Dept of Poultry Science</a></li>          
+                            <li><a href="http://harvest.cals.ncsu.edu/ncars/">Research</a></li>         
+                            <li><a href="http://www.soil.ncsu.edu/">Soil Science</a></li>           
+                            <li><a href="http://www.stat.ncsu.edu/">Statistics</a></li>         
+                            <li><a href="http://www.ces.ncsu.edu/depts/4hfcs/">Youth, Family, and Community Sciences</a></li>               
                         </ul>
 
                     </div>
@@ -71,13 +64,11 @@
                             <h3>CALS Social Media</h3>
 
                             <ul>
-
-                                <li><a href="#"><span class="glyphicon glyphicon-fb" data-alt="facebook" aria-hidden="true"></span> CALS Facebook Page</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-youtube" data-alt="youtube" aria-hidden="true"></span> CALS YouTube Channel</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-twitter" data-alt="twitter" aria-hidden="true"></span> CALS Twitter Page</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-flickr" data-alt="filckr" aria-hidden="true"></span> CALS Flickr Photos</a></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-pintrest" data-alt="pintrest" aria-hidden="true"></span> CALS Pinterest Page</a></li>
-
+                                <li><a href="https://www.facebook.com/NCSUCALS"><span class="glyphicon glyphicon-fb" data-alt="facebook" aria-hidden="true"></span> CALS Facebook Page</a></li>
+                                <li><a href="https://www.youtube.com/user/NCStateCALS"><span class="glyphicon glyphicon-youtube" data-alt="youtube" aria-hidden="true"></span> CALS YouTube Channel</a></li>
+                                <li><a href="https://twitter.com/ncsu_cals"><span class="glyphicon glyphicon-twitter" data-alt="twitter" aria-hidden="true"></span> CALS Twitter Page</a></li>
+                                <li><a href="https://www.flickr.com/photos/43370832@N08/"><span class="glyphicon glyphicon-flickr" data-alt="filckr" aria-hidden="true"></span> CALS Flickr Photos</a></li>
+                                <li><a href="https://www.pinterest.com/ncstatecals/"><span class="glyphicon glyphicon-pintrest" data-alt="pintrest" aria-hidden="true"></span> CALS Pinterest Page</a></li>
                             </ul>
 
                         </div>

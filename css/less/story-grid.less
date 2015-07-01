@@ -4,6 +4,10 @@
         margin-bottom: 80px;
     }
 
+    .story-grid-item-image {
+        background: @accent-gray-1;
+    }
+    
     .story-grid-item-image img {
         display: block;
         max-width: 100%;
@@ -21,13 +25,41 @@
 
         .story-grid-item-text {
             line-height: percentage(36/14);
-            margin-bottom: 0px;
+            margin-bottom: 1.1em;
         }
 
     }
 
+    .story-grid-item-heading {
+        font-weight: normal;
+        font-family: @sans-font-stack;
+        color: @primary-red;
+    }
+
+    .story-grid-item-text {
+        line-height: percentage(36/14);
+        margin-bottom: 1.1em;
+    }
+
     a:hover .story-grid-item-heading {
         color: @secondary-red;
+    }
+
+    ul a:hover {
+        color: @secondary-red;
+    }
+
+    li {
+        margin-top: 1.1rem;
+    }
+
+    .glyphicon-rss {
+        color: @primary-red;
+        font-size: 3.6em;
+        float: left;
+        margin-right: .3em;
+        margin-bottom: 0em;
+        margin-top: .2em;
     }
 
 }

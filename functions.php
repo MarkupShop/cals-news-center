@@ -28,6 +28,17 @@
     *****************************************************************************/
      
     ## Documentation: http://codex.wordpress.org/Post_Types
+
+    register_post_type( 'magazine',
+        array(
+            'labels' => array(
+                'name' => __( 'Perspectives Magazine Issues' ),
+                'singular_name' => __( 'Perspectives Magazine Issue' )
+            ),
+        'public' => true,
+        'has_archive' => false
+        )
+    );
          
     /*****************************************************************************
     *** iii.  Custom Taxonomies

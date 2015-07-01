@@ -33,13 +33,26 @@
 
     <h3>View the latest print versions of Perspectives</h3>
 
-    <div class="perspectives-embed">
-        <div data-configid="1573019/11254270" class="issuuembed"></div>
-    </div>
+    <?php
+        // Logic pulled from previous New Center homepage loops
+        $count = 2;
+        $args = array(
+            'post_status' => 'publish',
+            'post_type' => 'magazine',
+            'posts_per_page' => $count
+        );
+        $issuesQuery = new WP_Query($args);
+    ?>
 
-    <div class="perspectives-embed">
-        <div data-configid="1573019/10568290" class="issuuembed"></div>
-    </div>  
+    <?php if ($issuesQuery->have_posts()) : while ($issuesQuery->have_posts()) : $issuesQuery->the_post(); ?>
+
+        <?php $id = get_field('id'); ?>
+
+        <div class="perspectives-embed">
+            <div data-configid="<?php echo $id; ?>" class="issuuembed"></div>
+        </div>
+  
+    <?php endwhile; endif; ?>
 
     <script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
 

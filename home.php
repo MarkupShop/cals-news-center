@@ -37,7 +37,6 @@
                             'posts_per_page' => $count,
                             'post__not_in'  => $sticky,
                             'category_name' => 'media-releases,extension-news'
-                            // 'category__not_in' => array( 10,11,12,13,23,24,25,26,27,28,29,30,31,32,33,34,68,69,70 )
                         );
                         $nonFeaturePosts = new WP_Query($args);
                     ?>
@@ -60,7 +59,9 @@
 
                 <div class="row">
 
-                    
+                    <?php get_template_part('part','media-headlines'); ?>
+                    <?php get_template_part('part','economic-perspectives'); ?>
+                    <?php get_template_part('part','perspectives-mag'); ?>
 
                 </div>
 

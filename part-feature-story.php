@@ -1,25 +1,31 @@
 <div class="feature-story">
 
     <div class="feature-story-image">
-        <!-- <img src="https://www.ncsu.edu/wp-content/uploads/2014/08/gait-07.jpg" alt="Feature Story Image" /> -->
-        <?php if (has_post_thumbnail()) : ?>
+
+        <?php if (get_field('feature-image')) : ?>
+            <?php $image = get_field('feature-image'); ?>
             <div class="story-grid-item-image">
-                <?php the_post_thumbnail( array(1467, 1467) ); ?>
+                <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['title']; ?>" />
             </div>
         <?php endif; ?>
+    
     </div>
 
     <div class="wrapper">
 
-        <div class="feature-story-text">
-            
-            <a href="<?php the_permalink(); ?>">
+        <div class="container">
 
-                <h2 class="feature-story-heading"><?php the_title(); ?></h2>
-                <p><?php echo get_the_excerpt(); ?>
-                    <span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span></p>
+            <div class="feature-story-text">
+                
+                <a href="<?php the_permalink(); ?>">
 
-            </a>
+                    <h2 class="feature-story-heading"><?php the_title(); ?></h2>
+                    <p><?php echo get_the_excerpt(); ?>
+                        <span class="story-arrow glyphicon glyphicon-thin-arrow" aria-hidden="true"></span></p>
+
+                </a>
+
+            </div>
 
         </div>
 
