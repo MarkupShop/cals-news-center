@@ -2,7 +2,9 @@
 
     if(is_archive()) {
 
-        if (is_category('the-strategic-plan') || in_category('the-strategic-plan')) {
+        if(isset($_GET['cat']) && $_GET['cat'] === "12,11") {
+            get_sidebar('more-news');
+        } else if (is_category('the-strategic-plan') || in_category('the-strategic-plan')) {
             get_sidebar('strategic-plan');
         } else if (is_category('Perspectives') || in_category('Perspectives')) {
             get_sidebar('default');

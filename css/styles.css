@@ -321,6 +321,9 @@ a:focus .glyphicon-roman-arrow {
 .feature-story a {
   color: #333333;
 }
+.feature-story a .glyphicon-thin-arrow {
+  color: #cc0000;
+}
 .feature-story a .feature-story-heading {
   color: #cc0000;
 }
@@ -347,6 +350,22 @@ a:focus .glyphicon-roman-arrow {
 .feature-story .feature-story-text p {
   margin: 30px 0px 0px 0px;
 }
+.story-grid .feature-header {
+  color: #cc0000;
+  font-size: .9rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.story-grid .feature-header a {
+  color: #cc0000;
+  border-bottom: 1px solid #cc0000;
+  padding-bottom: 4px;
+  text-transform: none;
+}
+.story-grid .feature-header a:hover {
+  border-bottom: none;
+  padding: none;
+}
 .story-grid .story-grid-item {
   margin-bottom: 80px;
 }
@@ -369,6 +388,9 @@ a:focus .glyphicon-roman-arrow {
 .story-grid a .story-grid-item-text {
   line-height: 257.14285714%;
   margin-bottom: 1.1em;
+}
+.story-grid a .glyphicon-thin-arrow {
+  color: #cc0000;
 }
 .story-grid .story-grid-item-heading {
   font-weight: normal;

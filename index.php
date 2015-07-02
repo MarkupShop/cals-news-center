@@ -10,8 +10,12 @@
 
                 <div class="col-md-8 col-md-push-4">
 
-                    <?php $termTitle = single_term_title("", false); ?>
-                    <h2><?php echo $termTitle; ?></h2>
+                    <?php if(isset($_GET['cat']) && $_GET['cat'] === "12,11"): ?>
+                        <h2>More News</h2>
+                    <?php else: ?>
+                        <?php $termTitle = single_term_title("", false); ?>
+                        <h2><?php echo $termTitle; ?></h2>
+                    <?php endif; ?>
 
                     <?php get_template_part('part','loop'); ?>
                     <?php echo paginate_links(); ?>

@@ -27,6 +27,12 @@
             <div class="container">
 
                 <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="feature-header">Feature Stories | <a href="#">More Stories</a></h2>
+                    </div>
+                </div>
+
+                <div class="row">
 
                     <?php
                         // Logic pulled from previous New Center homepage loops

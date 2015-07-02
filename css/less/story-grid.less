@@ -1,5 +1,27 @@
 .story-grid {
 
+    .feature-header {
+
+        color: @primary-red;
+        font-size: .9rem;
+        text-transform: uppercase; 
+        margin-bottom: 30px;
+
+        a {
+            color: @primary-red;
+            border-bottom: 1px solid @primary-red;
+            padding-bottom: 4px; 
+            text-transform: none;
+            
+            &:hover {
+                border-bottom: none;
+                padding: none;
+            }
+
+        }
+
+    }
+
     .story-grid-item {
         margin-bottom: 80px;
     }
@@ -26,6 +48,10 @@
         .story-grid-item-text {
             line-height: percentage(36/14);
             margin-bottom: 1.1em;
+        }
+
+        .glyphicon-thin-arrow {
+            color: @primary-red;
         }
 
     }
