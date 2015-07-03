@@ -4,7 +4,10 @@
 
         if(isset($_GET['cat']) && $_GET['cat'] === "12,11") {
             get_sidebar('more-news');
-        } else if (is_category('the-strategic-plan') || in_category('the-strategic-plan')) {
+        } else if (is_category('the-strategic-plan') || 
+            is_category('strategic-plan-people') ||
+            is_category('strategic-plan-partnerships') ||
+            is_category('strategic-plan-programs')) {
             get_sidebar('strategic-plan');
         } else if (is_category('Perspectives') || in_category('Perspectives')) {
             get_sidebar('default');

@@ -1,9 +1,9 @@
 <div id="sidebar">
 
-    <h3>Tag Cloud</h3>
+    <h3>Archives</h3>
 
-    <div>
-        <?php wp_tag_cloud('smallest=8&largest=14'); ?> 
-    </div>
+    <ul>
+        <?php wp_get_archives('type=monthly'); ?>
+    </ul>
 
 </div><!-- end #sidebar -->
