@@ -336,7 +336,8 @@ a:focus .glyphicon-roman-arrow {
   line-height: 104.16666667%;
   font-family: 'GlyphaRoman', Serif;
 }
-.feature-story .feature-story-image img {
+.feature-story .feature-story-image img,
+.feature-story .feature-story-image video {
   display: block;
   max-width: 100%;
   margin: 0 auto;
