@@ -15,14 +15,14 @@
         <!-- OpenGraph & Twitter -->
         <?php if(is_home() || is_archive()): ?>
             <meta property="og:title" content="News from the College of Agriculture and Life Sciences at NC State" />
-            <meta property="twitter:title" content="News from the College of Agriculture and Life Sciences at NC State" />
+            <meta property="og:description" content="News from the College of Agriculture and Life Sciences at NC State" />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="<?php echo $_SERVER['PHP_SELF'] ?>" />
+            <meta property="og:url" content="<?php echo current_page_url(); ?>" />
         <?php else: ?>
-            <meta property="og:title" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
-            <meta property="twitter:title" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+            <meta property="og:title" content="<?php the_title(); ?>" />
+            <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
             <meta property="og:type" content="article" />
-            <meta property="og:url" content="<?php echo $_SERVER['PHP_SELF'] ?>" />
+            <meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
             <?php if (has_post_thumbnail()) : ?>
                 <?php 
                     $ogImageId = get_post_thumbnail_id();
