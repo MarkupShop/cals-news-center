@@ -37,12 +37,18 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 				<title><?php the_title_rss() ?></title>
 				<link><?php the_permalink_rss() ?></link>
 		        
-		        <?php if ( has_post_thumbnail() ) { ?>
+				<?php if (get_field('feature-image')): ?>
+            		<?php $image = get_field('feature-image'); ?>
+            		<images>
+		                <thumbnail><?php echo $image['sizes']['thumbnail'] ?></thumbnail>
+		                <large><?php echo $image['url'] ?></large>
+		            </images>
+		        <?php elseif ( has_post_thumbnail() ) : ?>
 		            <images>
 		                <thumbnail><?php the_post_thumbnail('thumbnail'); ?></thumbnail>
 		                <large><?php the_post_thumbnail('large'); ?></large>
 		            </images>
-		        <?php } ?>
+		        <?php endif; ?>
 				
 				<comments><?php comments_link_feed(); ?></comments>
 				<pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
