@@ -4,17 +4,44 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="General" name="rating"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <meta name="description" content="News from the College of Agriculture and Life Sciences at NC State" />
 
         <title><?php bloginfo('name'); ?></title>
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 
+        <!-- OpenGraph & Twitter -->
+        <?php if(is_home() || is_archive()): ?>
+            <meta property="og:title" content="News from the College of Agriculture and Life Sciences at NC State" />
+            <meta property="twitter:title" content="News from the College of Agriculture and Life Sciences at NC State" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="<?php echo $_SERVER['PHP_SELF'] ?>" />
+        <?php else: ?>
+            <meta property="og:title" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+            <meta property="twitter:title" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="<?php echo $_SERVER['PHP_SELF'] ?>" />
+            <?php if (has_post_thumbnail()) : ?>
+                <?php 
+                    $ogImageId = get_post_thumbnail_id();
+                    $ogImageUrl = wp_get_attachment_image_src($ogImageId,'thumbnail-size', true);
+                ?>
+                <meta property="og:image" content="<?php echo $ogImageUrl[0]; ?>" />
+            <?php endif; ?>
+        <?php endif; ?>
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@ncsu_cals" />
+        <!-- End OpenGraph -->
+
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+        <!-- start wp_head() -->
         <?php wp_head(); ?>
+        <!-- end wp_head() -->
     </head>
     
     <body>
