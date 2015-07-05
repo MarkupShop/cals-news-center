@@ -2,37 +2,18 @@
 
 	<div class="story-grid-item">
 
-		<h3 class="story-grid-item-heading">More Headlines</h3>
+		<h3 class="story-grid-item-heading">Headlines</h3>
 
 		<ul class="list-unstyled">
-		<?php
-			$count = 8;
-			$sticky = get_option('sticky_posts');
-			$args = array(
-			    'post_status' => 'publish',
-			    'posts_per_page' => $count,
-			    'post__not_in'  => $sticky,
-			    'category_name' => 'media-releases,extension-news'
-			);
-			$nonFeaturePosts = new WP_Query($args);
-
-			if ($nonFeaturePosts->have_posts()): 
-				
-				while ($nonFeaturePosts->have_posts()): 
-				
-					$nonFeaturePosts->the_post();
-					$count--;
-
-					if($count < 5 && $count >= 0):
-
-						echo "<li><a href=\"" . get_permalink() . "\">" . get_the_title() . "</a></li>";
-
-					endif;
-
-				endwhile;
-
-			endif;
-		?>
+			<?php wp_list_bookmarks(array(
+				'category' => 21,
+				'categorize' => false,
+				'show_name' => false,
+				'title_before' => '',
+				'title_after' => '',
+				'title_li' => '',
+				'limit' => 5
+			)); ?>
 		</ul>
 
 	</div><!-- end .story-grid-item -->

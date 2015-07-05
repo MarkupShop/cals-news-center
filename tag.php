@@ -10,7 +10,9 @@
 
                 <div class="col-md-8 col-md-push-4">
     
-                    <?php if (is_category()) { ?>
+                    <?php if (is_tag('you-decide')) { ?>
+                        <h2>Mike Walden's You Decide</h2>
+                    <?php } elseif (is_category()) { ?>
                         <h2>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
                     <?php } elseif( is_tag() ) { ?>
                         <h2>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>

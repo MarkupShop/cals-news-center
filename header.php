@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <meta name="description" content="News from the College of Agriculture and Life Sciences at NC State" />
 
-        <title><?php bloginfo('name'); ?></title>
+        <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?> <?php if ( !wp_title('', true, 'left') ); { ?> | <?php bloginfo('description'); ?> <?php } ?></title>
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
         <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
