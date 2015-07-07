@@ -3,22 +3,14 @@
     <h3>Issues</h3>
 
     <?php 
-        $issues = get_terms('perspectives-issues', array(
-            "order" => "desc",
-            "orderby" => "id"
-        )); 
-
-        if ($issues) {
-            
-            echo "<ul>";
-            
-            foreach ($issues as $issue) {
-                echo "<li><a href=\"" . home_url() . "/perspectives-issues/{$issue->slug}\">{$issue->name}</a></li>";
-            }  
-            
-            echo "</ul>";
-        
-        } 
+        $args = array(
+            'container' => false,
+            'menu' => 'Perspectives Issues',
+            'fallback_cb' => 'wp_list_categories',
+            'title_li' => false,
+            'depth' => 2
+        );
+        wp_nav_menu($args);
     ?>
 
     <ul>
