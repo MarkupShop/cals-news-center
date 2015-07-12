@@ -44,7 +44,7 @@
         <!-- end wp_head() -->
     </head>
     
-    <body>
+    <body <?php body_class(); ?>> 
 
         <a class="sr-only" href="#main-content-wrapper">Skip to main content</a>
         
